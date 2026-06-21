@@ -1,0 +1,152 @@
+{
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "ollama/nemotron-3-super:cloud"
+      },
+      "models": {
+        "google/gemini-3.1-pro-preview": {},
+        "ollama/kimi-k2.6:cloud": {}
+      },
+      "workspace": "C:\\Users\\2k22c\\.openclaw\\workspace"
+    }
+  },
+  "auth": {
+    "profiles": {
+      "google:default": {
+        "mode": "api_key",
+        "provider": "google"
+      }
+    }
+  },
+  "channels": {
+    "slack": {
+      "appToken": "",
+      "botToken": "",
+      "capabilities": {
+        "interactiveReplies": true
+      },
+      "enabled": true,
+      "groupPolicy": "open"
+    }
+  },
+  "gateway": {
+    "auth": {
+      "mode": "token",
+      "token": "aaaa43dc44d8b0094dac7476dcb562f550171efd2dba16c6"
+    },
+    "bind": "loopback",
+    "controlUi": {
+      "allowInsecureAuth": true
+    },
+    "mode": "local",
+    "nodes": {
+      "denyCommands": [
+        "camera.snap",
+        "camera.clip",
+        "screen.record",
+        "contacts.add",
+        "calendar.add",
+        "reminders.add",
+        "sms.send",
+        "sms.search"
+      ]
+    },
+    "port": 18789,
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    }
+  },
+  "meta": {
+    "lastTouchedAt": "2026-06-21T10:53:03.103Z",
+    "lastTouchedVersion": "2026.6.9"
+  },
+  "models": {
+    "providers": {
+      "ollama": {
+        "api": "ollama",
+        "apiKey": "ollama-local",
+        "baseUrl": "http://127.0.0.1:11434",
+        "models": [
+          {
+            "contextWindow": 262144,
+            "cost": {
+              "cacheRead": 0,
+              "cacheWrite": 0,
+              "input": 0,
+              "output": 0
+            },
+            "id": "nemotron-3-super:cloud",
+            "input": [
+              "text"
+            ],
+            "maxTokens": 65536,
+            "name": "nemotron-3-super:cloud"
+          },
+          {
+            "contextWindow": 524288,
+            "cost": {
+              "cacheRead": 0,
+              "cacheWrite": 0,
+              "input": 0,
+              "output": 0
+            },
+            "id": "minimax-m3:cloud",
+            "input": [
+              "text"
+            ],
+            "maxTokens": 131072,
+            "name": "minimax-m3:cloud"
+          },
+          {
+            "contextWindow": 262144,
+            "cost": {
+              "cacheRead": 0,
+              "cacheWrite": 0,
+              "input": 0,
+              "output": 0
+            },
+            "id": "kimi-k2.5:cloud",
+            "input": [
+              "text"
+            ],
+            "maxTokens": 262144,
+            "name": "kimi-k2.5:cloud"
+          }
+        ]
+      }
+    }
+  },
+  "plugins": {
+    "entries": {
+      "google": {
+        "enabled": true
+      },
+      "ollama": {
+        "enabled": true
+      },
+      "slack": {
+        "enabled": true
+      }
+    }
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "tools": {
+    "profile": "coding",
+    "web": {
+      "search": {
+        "enabled": true,
+        "provider": "ollama"
+      }
+    }
+  },
+  "wizard": {
+    "lastRunAt": "2026-06-21T10:53:02.804Z",
+    "lastRunCommand": "onboard",
+    "lastRunMode": "local",
+    "lastRunVersion": "2026.6.9"
+  }
+}
